@@ -7,7 +7,7 @@ from apis.models import CustomUser
 
 class Order(models.Model):
     user = models.ForeignKey(CustomUser, related_name='orders', on_delete=models.CASCADE)
-    paid = models.BooleanField(default=False)
+    products = models.ManyToManyField(Product, through='OrderItem')
     created = models.DateTimeField(auto_now_add=True, null=True)
     updated = models.DateTimeField(auto_now=True, null=True)
 
@@ -16,9 +16,6 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order ID: {self.id}"
-
-    def get_total_cost(self):
-        return sum(item.get_cost() for item in self.items.all())
 
 
 class OrderItem(models.Model):
@@ -29,6 +26,3 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return str(self.id)
-
-    def get_cost(self):
-        return self.price * self.quantity
