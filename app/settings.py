@@ -46,7 +46,6 @@ THIRD_PARTY_APPS = [
 
 MY_APPS = [
     'apis.apps.ApisConfig',
-    'core.apps.CoreConfig',
     'products.apps.ProductsConfig',
     'orders.apps.OrdersConfig',
 ]
