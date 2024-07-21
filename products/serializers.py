@@ -12,7 +12,9 @@ class ProductCategorySerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     """Serializer for the Product model"""
-    category = ProductCategorySerializer(read_only=True)
+    category = serializers.PrimaryKeyRelatedField(
+        queryset=ProductCategory.objects.all(),
+    )
 
     class Meta:
         model = Product
