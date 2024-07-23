@@ -1,4 +1,5 @@
 """ Serialization of the object from the database"""
+from django_filters.rest_framework import FilterSet
 from rest_framework import serializers
 from .models import ProductCategory, Product
 

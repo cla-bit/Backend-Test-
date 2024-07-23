@@ -2,8 +2,8 @@ import pytest
 from django.contrib.auth.hashers import check_password
 from rest_framework import serializers
 
-from .models import CustomUser
-from .serializers import CustomUserSerializer
+from apis.models import CustomUser
+from apis.serializers import CustomUserSerializer
 
 
 @pytest.fixture

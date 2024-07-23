@@ -23,10 +23,7 @@ classifiers = [
 text = "Copyright ©2024 Peter Mbachu"
 
 [tool.poetry.urls]
-"Homepage" = "https://github.com/cla-bit/PayStackEase"
-"Source Code" = "https://github.com/cla-bit/PayStackEase"
-"Documentation" = "https://paystackease.readthedocs.io/en/latest/"
-"Bug Tracker" = "https://github.com/cla-bit/PayStackEase/issues"
+"Source Code" = "https://github.com/cla-bit/Backend-Test-.git"
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -39,6 +36,13 @@ python-decouple = "^3.8"
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.2.5"
 flake8 = "^7.1.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--doctest-modules"
 
 [build-system]
 requires = ["poetry-core"]

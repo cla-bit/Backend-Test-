@@ -1,9 +1,11 @@
 # from django.shortcuts import render
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import BasePermission, SAFE_METHODS
-
+from rest_framework.pagination import PageNumberPagination
 from .models import ProductCategory, Product
 from .serializers import ProductSerializer, ProductCategorySerializer, DetailProductSerializer
+from .filters import ProductFilter
 
 # Create your views here.
 
@@ -30,6 +32,9 @@ class ProductViewSet(ModelViewSet):
     permission_classes = [IsAdminOrReadOnly]
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    pagination_class = PageNumberPagination
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = ProductFilter
 
     def get_serializer_class(self):
         if self.action == 'retrieve':

@@ -1,7 +1,7 @@
 import pytest
 from django.core.exceptions import ValidationError
 
-from .models import ProductCategory, Product
+from products.models import ProductCategory, Product
 
 
 @pytest.mark.django_db

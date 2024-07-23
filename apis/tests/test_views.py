@@ -3,9 +3,9 @@ from django.contrib.auth import authenticate
 from rest_framework import status
 from rest_framework.test import APIClient
 
-from .models import CustomUser
-from .serializers import CustomUserSerializer
-from .views import UserRegistrationAPIView, UserLoginAPIView
+from apis.models import CustomUser
+from apis.serializers import CustomUserSerializer
+from apis.views import UserRegistrationAPIView, UserLoginAPIView
 
 
 @pytest.mark.django_db

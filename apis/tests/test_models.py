@@ -2,11 +2,12 @@ import pytest
 from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
 from django.urls import reverse
+from django.utils.text import slugify
 from rest_framework import status
 from rest_framework.test import APIClient
 
-from .models import CustomUser
-from .serializers import CustomUserSerializer  # Assuming your serializer exists
+from apis.models import CustomUser
+from apis.serializers import CustomUserSerializer  # Assuming your serializer exists
 
 
 @pytest.fixture

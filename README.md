@@ -89,3 +89,9 @@ You will be provided with a virtual machine IP address hosted on Digital Ocean p
 - Also note that you can ignore the Docker and CI/CD instantiations on the application.
 
 ### Good luck, as we look forward to working with you at Liberty Assured in building amazing projects and relationships.
+
+# Postman API Documentation Test Endpoints
+
+1. User management: [Here for the Postman API Documentation](https://backend-test-postman-api.postman.co/workspace/Backend-Test-Postman-API-Worksp~5ac55dbf-f19d-4ded-b830-bf34ccc25755/folder/27786069-cfe5acc1-c99f-4629-8169-9acd63165fab?action=share&creator=27786069&ctx=documentation)
+2. Product management: [Here for the Postman API Documentation](https://backend-test-postman-api.postman.co/workspace/Backend-Test-Postman-API-Worksp~5ac55dbf-f19d-4ded-b830-bf34ccc25755/folder/27786069-2a522d0c-68c4-4988-b74f-9011fada2d37?action=share&creator=27786069&ctx=documentation)
+3. Order management: [Here for the Postman PI Documentation](https://backend-test-postman-api.postman.co/workspace/Backend-Test-Postman-API-Worksp~5ac55dbf-f19d-4ded-b830-bf34ccc25755/folder/27786069-f67f7517-b9b7-4343-86ab-7c9b76120b3f?action=share&creator=27786069&ctx=documentation)
