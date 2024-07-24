@@ -90,6 +90,24 @@ You will be provided with a virtual machine IP address hosted on Digital Ocean p
 
 ### Good luck, as we look forward to working with you at Liberty Assured in building amazing projects and relationships.
 
+## How to run the project:
+
+This project makes use of poetry as a dependency manager. To run the project, ensure you have poetry installed.
+
+1. Run `pipx install poetry`
+2. Run `pip install poetry`
+3. Clone the repository from GitHub.
+4. Run `poetry install` as this will install the dependencies from pyproject.toml file.
+5. Run `poetry shell` to create a virtual environment.
+6. Run `python manage.py makemigrations` and `python manage.py migrate` to run migrations and migrate command to database.
+7. Run `python manage.py runserver` to start the virtual environment to run the application.
+
+### Note: Ensure you already have set up PostgreSQL database before running migrations and migrate commands.
+
+In case you prefer to use sqlite to make it faster instead of setting up PostgreSQL database,
+comment the PostgreSQL `DATABASES settings` section in the `app/settings.py` file and uncomment the
+SQLITE3 `DATABASES settings`.
+
 # Postman API Documentation Test Endpoints
 
 1. User management: [Here for the Postman API Documentation](https://backend-test-postman-api.postman.co/workspace/Backend-Test-Postman-API-Worksp~5ac55dbf-f19d-4ded-b830-bf34ccc25755/folder/27786069-cfe5acc1-c99f-4629-8169-9acd63165fab?action=share&creator=27786069&ctx=documentation)
