@@ -98,10 +98,11 @@ This project makes use of poetry as a dependency manager. To run the project, en
 2. Run `pip install poetry`
 3. Clone the repository from GitHub.
 4. Run `poetry install --no-root` as this will install the dependencies from pyproject.toml file.
-5. Run `poetry shell` to create a virtual environment.
+5. Run `poetry shell` to create and activate a virtual environment.
 6. Run `python manage.py makemigrations` and `python manage.py migrate` to run migrations and migrate command to database.
 7. Run `python manage.py runserver` to start the virtual environment to run the application.
 8. Install and configure `Postman` to test the endpoints.
+9. To exit virtual environment, run `exit` command.
 
 ### Note: Ensure you already have set up PostgreSQL database before running migrations and migrate commands.
 
