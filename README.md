@@ -127,7 +127,7 @@ DB_PORT=DB_PORT
 ```
 
 # Run Tests:
-Run `pytest/app_name/tests` on your terminal
+Run `pytest app_name/tests` on your terminal
 
 # Postman API Documentation Test Endpoints
 
