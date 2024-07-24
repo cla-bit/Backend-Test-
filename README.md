@@ -97,7 +97,7 @@ This project makes use of poetry as a dependency manager. To run the project, en
 1. Run `pipx install poetry`
 2. Run `pip install poetry`
 3. Clone the repository from GitHub.
-4. Run `poetry install` as this will install the dependencies from pyproject.toml file.
+4. Run `poetry install --no-root` as this will install the dependencies from pyproject.toml file.
 5. Run `poetry shell` to create a virtual environment.
 6. Run `python manage.py makemigrations` and `python manage.py migrate` to run migrations and migrate command to database.
 7. Run `python manage.py runserver` to start the virtual environment to run the application.
