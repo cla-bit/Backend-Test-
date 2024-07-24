@@ -101,12 +101,30 @@ This project makes use of poetry as a dependency manager. To run the project, en
 5. Run `poetry shell` to create a virtual environment.
 6. Run `python manage.py makemigrations` and `python manage.py migrate` to run migrations and migrate command to database.
 7. Run `python manage.py runserver` to start the virtual environment to run the application.
+8. Install and configure `Postman` to test the endpoints.
 
 ### Note: Ensure you already have set up PostgreSQL database before running migrations and migrate commands.
 
 In case you prefer to use sqlite to make it faster instead of setting up PostgreSQL database,
 comment the PostgreSQL `DATABASES settings` section in the `app/settings.py` file and uncomment the
 SQLITE3 `DATABASES settings`.
+
+## Environment variables:
+
+Set the following environment variables in your `.env` file. See `.env.example` file for details
+
+```dotenv
+
+SECRET_KEY=YOUR_SECRET_KEY
+DEBUG=True# or False for production
+DB_NAME=DB_NAME
+DB_USER=DB_USER
+DB_PASSWORD=DB_PASSWORD
+DB_HOST=DB_HOST
+DB_PORT=DB_PORT
+
+```
+
 
 # Postman API Documentation Test Endpoints
 
