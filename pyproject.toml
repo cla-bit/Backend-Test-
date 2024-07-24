@@ -40,10 +40,12 @@ flake8 = "^7.1.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0"
+pytest-django = "^4.8.0"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "--doctest-modules"
+DJANGO_SETTINGS_MODULE = "app.settings"
 
 [build-system]
 requires = ["poetry-core"]

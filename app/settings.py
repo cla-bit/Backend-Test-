@@ -86,24 +86,24 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME', cast=str),
-        'USER': config('DB_USER', cast=str),
-        'PASSWORD': config('DB_PASSWORD', cast=str),
-        'HOST': config('DB_HOST', cast=str),
-        'PORT': config('DB_PORT', cast=int),
-        'CONN_MAX_AGE': 600,  # 10 minutes
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('DB_NAME', cast=str),
+#         'USER': config('DB_USER', cast=str),
+#         'PASSWORD': config('DB_PASSWORD', cast=str),
+#         'HOST': config('DB_HOST', cast=str),
+#         'PORT': config('DB_PORT', cast=int),
+#         'CONN_MAX_AGE': 600,  # 10 minutes
+#     }
+# }
 
 
 # Password validation

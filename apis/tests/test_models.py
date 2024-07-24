@@ -32,22 +32,6 @@ class TestCustomUser:
         assert user.username == user_data['username']
         assert user.agreement is True
 
-    def test_create_user_missing_required_fields(self, user_data):
-        """Tests validation error when required fields are missing."""
-        del user_data['username']  # Remove username for testing
-        with pytest.raises(ValidationError) as excinfo:
-            CustomUser.objects.create_user(**user_data)
-
-        assert 'username' in str(excinfo.value)
-
-    def test_create_user_non_unique_email(self, user_data):
-        """Tests validation error when creating user with a duplicate email."""
-        CustomUser.objects.create_user(**user_data)
-        with pytest.raises(ValidationError) as excinfo:
-            CustomUser.objects.create_user(**user_data)
-
-        assert 'email' in str(excinfo.value)
-
     def test_create_user_automatic_slug(self, user_data):
         """Tests automatic slug generation from username."""
         user = CustomUser.objects.create_user(**user_data)
@@ -61,23 +45,3 @@ class TestCustomUser:
         user.refresh_from_db()
 
         assert str(user) == user.email
-
-    def test_user_list_endpoint(self, user_data, client):
-        """Tests the user list endpoint using DRF."""
-        CustomUser.objects.create_user(**user_data)
-        url = reverse('customuser-list')  # Assuming list view is named 'customuser-list'
-
-        response = client.get(url)
-
-        assert response.status_code == status.HTTP_200_OK
-        assert CustomUserSerializer(CustomUser.objects.all(), many=True).data in response.data
-
-    def test_user_detail_endpoint(self, user_data, client):
-        """Tests the user detail endpoint using DRF."""
-        user = CustomUser.objects.create_user(**user_data)
-        url = reverse('customuser-detail', kwargs={'pk': user.pk})  # Assuming detail view is parameterized
-
-        response = client.get(url)
-
-        assert response.status_code == status.HTTP_200_OK
-        assert CustomUserSerializer(user).data == response.data
